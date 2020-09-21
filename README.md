@@ -2,9 +2,12 @@
 
 ### Project Title: Purchasing System
 
+### Project Vision:
+
+
 ### Team Members:
 Ting-Chen Wang, Xiayan Li, Eric Jaroszewski
-### Header 2
+### 
 ### Header 3
 
 - Bulleted
