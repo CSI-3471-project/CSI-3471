@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Meeting Notes"
-permalink: /meetingNote/
+title: Meeting Note
+permalink: https://csi-3471-project.github.io/CSI-3471/MeetingNotes
 ---
-Meeting Notes
+<h1>Meeting Notes<h1>
