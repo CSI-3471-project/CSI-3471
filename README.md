@@ -1,3 +1,6 @@
+---
+permalink: /introduction/
+---
 ## Welcome to CSI-3471 Group Project
 
 ### Project Title: Bear Trade Platform
