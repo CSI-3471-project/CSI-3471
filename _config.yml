@@ -2,3 +2,9 @@
 theme: jekyll-theme-architect
 baseurl: /CSI-3471-project/BearTrade
 ---
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/MeetingNotes/">MeetingNotes</a></li>
+  </ul>
+</nav>
