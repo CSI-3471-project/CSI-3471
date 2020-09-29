@@ -1,0 +1,55 @@
+Contract1: makePayment
+Operation: makePayment(itemID:itemID)
+Cross References: Use Cases: make payment
+Pre-conditions:
+Post-conditions:
+
+Contract2: givePaymentOption
+Operation: givePaymentOption(option)
+Cross References: Use Cases:make payment
+Pre-conditions:
+Post-conditions:
+
+Contract3: provideAfterPaymentInfo
+Operation: provideAfterPaymentInfo(address, receipt choice)
+Cross References: Use Cases: ask for post payment information
+Pre-conditions:
+Post-conditions:
+
+Contract4: markItemSold
+Operation: markItemSold()
+Cross References: Use Cases: mark items sold
+Pre-conditions:
+Post-conditions:
+
+Contract5: updateSellerProfit
+Operation: updateSellerProfit()
+Cross References: Use Cases: update profit amount on seller profiles
+Pre-conditions:
+Post-conditions:
+
+Contract6: updateAvailableItems
+Operation: updateAvailableItems()
+Cross References: Use Cases: update list of avilable items
+Pre-conditions:
+Post-conditions:
+
+Contract7: viewProfile
+Operation: viewProfile(profileId)
+Cross References: Use Cases: view profile
+Pre-conditions:
+Post-conditions:
+
+Contract8: leaveMessage
+Operation: leaveMessage(text)
+Cross References: Use Cases: leave messages
+Pre-conditions:
+Post-conditions:
+
+Contract9: updateProfile
+Operation: updateProfile(info)
+Cross References: Use Cases: update profile
+Pre-conditions:
+Post-conditions:
+
+  
