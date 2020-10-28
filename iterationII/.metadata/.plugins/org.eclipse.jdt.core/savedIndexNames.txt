@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+D:\CS3471\Bear Trade Platform\CSI-3471\iterationII\.metadata\.plugins\org.eclipse.jdt.core
+613288166.index
