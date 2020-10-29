@@ -78,13 +78,14 @@ public class NeedItemPostWindow extends JPanel {
 					.addContainerGap())
 		);
 		setLayout(groupLayout);
+		setSize(451,518);
 
 	}
 	
 	static void createAndShowGUI() {
         //Create and set up the window.
         JFrame frame = new JFrame("Need Item Post");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
         //Add contents to the window.
         frame.getContentPane().add(new NeedItemPostWindow());
