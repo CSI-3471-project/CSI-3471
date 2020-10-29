@@ -110,6 +110,7 @@ public class LoginPage extends JFrame implements ActionListener {
 				mainPage window = new mainPage();
 				window.frame.setVisible(true);
 			}else {
+				//TODO error dialog here
 				System.out.println(textField.getText());
 				System.out.println(passwordField.getText());
 			}
