@@ -16,6 +16,9 @@ import javax.swing.JOptionPane;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.SwingConstants;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridBagLayout;
@@ -81,36 +84,47 @@ public class mainPage {
 		menuBar.setFont(new Font("Segoe UI", Font.PLAIN, 12));
         JMenu menu;
         JMenuItem menuItem;
-        menu = new JMenu("+");
-        menuBar.add(menu);
 		menuBar.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
 			}
 		});
-		  menuItem = new JMenuItem("Need Item Post");
-	        menu.add(menuItem);
-	        menuItem.addActionListener(new ActionListener() {
-	            @Override
-	            public void actionPerformed(ActionEvent e) {
-	            }
-	        });
-			  menuItem = new JMenuItem("Sell Item Post");
-		        menu.add(menuItem);
-		        menuItem.addActionListener(new ActionListener() {
-		            @Override
-		            public void actionPerformed(ActionEvent e) {
-		            }
-		        });
-				  menuItem = new JMenuItem("Bid Item Post");
-			        menu.add(menuItem);
-			        menuItem.addActionListener(new ActionListener() {
-			            @Override
-			            public void actionPerformed(ActionEvent e) {
-			            }
-			        });
 		frame.setJMenuBar(menuBar);
+		
+		JPanel panel_4 = new JPanel();
+		menuBar.add(panel_4);
+		menu = new JMenu("+");
+		menuBar.add(menu);
+		menuItem = new JMenuItem("Need Item Post");
+		menu.add(menuItem);
+		menuItem.addActionListener(new ActionListener() {
+		    @Override
+		    public void actionPerformed(ActionEvent e) {
+		    	   SwingUtilities.invokeLater(new Runnable() {
+		  	            public void run() {
+		  	                //Turn off metal's use of bold fonts
+		  	            	formattedText textItem = new formattedText();
+		  		        UIManager.put("swing.boldMetal", Boolean.FALSE);
+		  	                textItem.createAndShowGUI();
+		  	            }
+		  	        });
+		    }
+		});
+		menuItem = new JMenuItem("Sell Item Post");
+		menu.add(menuItem);
+		menuItem.addActionListener(new ActionListener() {
+		    @Override
+		    public void actionPerformed(ActionEvent e) {
+		    }
+		});
+		menuItem = new JMenuItem("Bid Item Post");
+		menu.add(menuItem);
+		menuItem.addActionListener(new ActionListener() {
+		    @Override
+		    public void actionPerformed(ActionEvent e) {
+		    }
+		});
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[]{0, 0};
 		gridBagLayout.rowHeights = new int[]{0, 0};
