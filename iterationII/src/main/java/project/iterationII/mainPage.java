@@ -4,7 +4,10 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JMenu;
+import javax.swing.AbstractAction;
 import javax.swing.JButton;
+import javax.swing.JDialog;
+
 import java.awt.BorderLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -12,12 +15,15 @@ import javax.swing.JTextField;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.SwingConstants;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.GridBagLayout;
+import java.awt.GridLayout;
 
 public class mainPage {
 
@@ -51,7 +57,9 @@ public class mainPage {
 	/**
 	 * Initialize the contents of the frame.
 	 */
+	static int editCondition =0;
 	private void initialize() {
+		
 		frame = new JFrame();
 		frame.setBounds(100, 100, 564, 402);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -91,13 +99,18 @@ public class mainPage {
 	        menuItem.addActionListener(new ActionListener() {
 	            @Override
 	            public void actionPerformed(ActionEvent e) {
+	            	String result = (String) JOptionPane.showInputDialog(frame, "Put Item request here");
+	            	
 	            }
 	        });
+	    	//
+	        
 			  menuItem = new JMenuItem("Sell Item Post");
 		        menu.add(menuItem);
 		        menuItem.addActionListener(new ActionListener() {
 		            @Override
 		            public void actionPerformed(ActionEvent e) {
+		            	String result = (String) JOptionPane.showInputDialog(frame, "Put Sell Item info here");
 		            }
 		        });
 				  menuItem = new JMenuItem("Bid Item Post");
@@ -105,6 +118,7 @@ public class mainPage {
 			        menuItem.addActionListener(new ActionListener() {
 			            @Override
 			            public void actionPerformed(ActionEvent e) {
+			            	String result = (String) JOptionPane.showInputDialog(frame, "Put Bid Item info here");
 			            }
 			        });
 		frame.setJMenuBar(menuBar);
