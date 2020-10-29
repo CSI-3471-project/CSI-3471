@@ -41,7 +41,7 @@ import com.jgoodies.forms.layout.FormSpecs;
 import java.awt.GridLayout;
 import javax.swing.JScrollBar;
 
-public class mainPage {
+public class mainPage implements ActionListener{
 
 	private JFrame frame;
 	private JMenuBar menuBar;
@@ -98,19 +98,10 @@ public class mainPage {
 		menuBar.add(menu);
 		menuItem = new JMenuItem("Need Item Post");
 		menu.add(menuItem);
-		menuItem.addActionListener(new ActionListener() {
-		    @Override
-		    public void actionPerformed(ActionEvent e) {
-		    	   SwingUtilities.invokeLater(new Runnable() {
-		  	            public void run() {
-		  	                //Turn off metal's use of bold fonts
-		  	            	formattedText textItem = new formattedText();
-		  		        UIManager.put("swing.boldMetal", Boolean.FALSE);
-		  	                textItem.createAndShowGUI();
-		  	            }
-		  	        });
-		    }
-		});
+		menuItem.setActionCommand("Need Item Post");
+		
+		menuItem.addActionListener(this);
+		
 		menuItem = new JMenuItem("Sell Item Post");
 		menu.add(menuItem);
 		menuItem.addActionListener(new ActionListener() {
@@ -327,5 +318,16 @@ public class mainPage {
 		);
 		panel_1.setLayout(gl_panel_1);
 		panel.setLayout(gl_panel);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		if(e.getActionCommand()=="Need Item Post") {
+			NeedItemPostWindow window = new NeedItemPostWindow();
+		        UIManager.put("swing.boldMetal", Boolean.FALSE);
+	                window.createAndShowGUI();
+		}
+		
 	}
 }
