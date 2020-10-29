@@ -46,6 +46,7 @@ public class mainPage implements ActionListener {
 	private JFrame frame;
 	private JMenuBar menuBar;
 	private JPanel panel;
+	private JPanel info_Panel;
 
 	/**
 	 * Launch the application.
@@ -129,8 +130,8 @@ public class mainPage implements ActionListener {
 		JPanel panel_1 = new JPanel();
 		panel_1.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
 
-		JPanel panel_2 = new JPanel();
-		panel_2.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
+		JPanel info_Panel = new JPanel();
+		info_Panel.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
 
 		JPanel panel_3_4 = new JPanel();
 		GroupLayout gl_panel = new GroupLayout(panel);
@@ -141,7 +142,7 @@ public class mainPage implements ActionListener {
 								.addPreferredGap(ComponentPlacement.RELATED)
 								.addGroup(gl_panel.createParallelGroup(Alignment.TRAILING)
 										.addGroup(gl_panel.createSequentialGroup()
-												.addComponent(panel_2, GroupLayout.PREFERRED_SIZE, 377,
+												.addComponent(info_Panel, GroupLayout.PREFERRED_SIZE, 377,
 														GroupLayout.PREFERRED_SIZE)
 												.addGap(2))
 										.addGroup(gl_panel
@@ -152,7 +153,7 @@ public class mainPage implements ActionListener {
 				.addGroup(gl_panel.createSequentialGroup().addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
 						.addComponent(panel_1, GroupLayout.PREFERRED_SIZE, 331, GroupLayout.PREFERRED_SIZE)
 						.addGroup(gl_panel.createSequentialGroup()
-								.addComponent(panel_2, GroupLayout.PREFERRED_SIZE, 333, GroupLayout.PREFERRED_SIZE)
+								.addComponent(info_Panel, GroupLayout.PREFERRED_SIZE, 333, GroupLayout.PREFERRED_SIZE)
 								.addPreferredGap(ComponentPlacement.RELATED)
 								.addComponent(panel_3_4, GroupLayout.PREFERRED_SIZE, 66, GroupLayout.PREFERRED_SIZE)))
 						.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
@@ -170,23 +171,23 @@ public class mainPage implements ActionListener {
 
 		JPanel panel_3_3 = new JPanel();
 		panel_3_3.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
-		GroupLayout gl_panel_2 = new GroupLayout(panel_2);
-		gl_panel_2.setHorizontalGroup(gl_panel_2.createParallelGroup(Alignment.LEADING).addGroup(gl_panel_2
+		GroupLayout gl_info_Panel = new GroupLayout(info_Panel);
+		gl_info_Panel.setHorizontalGroup(gl_info_Panel.createParallelGroup(Alignment.LEADING).addGroup(gl_info_Panel
 				.createSequentialGroup()
 				.addComponent(
 						scrollBar, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 				.addPreferredGap(ComponentPlacement.RELATED)
-				.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_info_Panel.createParallelGroup(Alignment.LEADING)
 						.addComponent(panel_3_1, GroupLayout.PREFERRED_SIZE, 350, GroupLayout.PREFERRED_SIZE)
 						.addComponent(panel_3, GroupLayout.PREFERRED_SIZE, 350, GroupLayout.PREFERRED_SIZE)
 						.addComponent(panel_3_2, GroupLayout.PREFERRED_SIZE, 350, GroupLayout.PREFERRED_SIZE)
 						.addComponent(panel_3_3, GroupLayout.PREFERRED_SIZE, 350, GroupLayout.PREFERRED_SIZE))
 				.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
-		gl_panel_2.setVerticalGroup(gl_panel_2.createParallelGroup(Alignment.LEADING).addGroup(gl_panel_2
+		gl_info_Panel.setVerticalGroup(gl_info_Panel.createParallelGroup(Alignment.LEADING).addGroup(gl_info_Panel
 				.createSequentialGroup().addContainerGap()
-				.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_info_Panel.createParallelGroup(Alignment.LEADING)
 						.addComponent(scrollBar, GroupLayout.PREFERRED_SIZE, 305, GroupLayout.PREFERRED_SIZE)
-						.addGroup(gl_panel_2.createSequentialGroup().addGap(4)
+						.addGroup(gl_info_Panel.createSequentialGroup().addGap(4)
 								.addComponent(panel_3, GroupLayout.PREFERRED_SIZE, 66, GroupLayout.PREFERRED_SIZE)
 								.addPreferredGap(ComponentPlacement.RELATED)
 								.addComponent(panel_3_1, GroupLayout.PREFERRED_SIZE, 66, GroupLayout.PREFERRED_SIZE)
@@ -215,7 +216,7 @@ public class mainPage implements ActionListener {
 						.addPreferredGap(ComponentPlacement.RELATED, 16, Short.MAX_VALUE).addComponent(lblNewLabel_5)
 						.addContainerGap()));
 		panel_3.setLayout(gl_panel_3);
-		panel_2.setLayout(gl_panel_2);
+		info_Panel.setLayout(gl_info_Panel);
 
 		JButton btnNewButton = new JButton("Chat");
 		btnNewButton.addActionListener(new ActionListener() {
@@ -241,6 +242,8 @@ public class mainPage implements ActionListener {
 				new ImageIcon("D:\\CS3471\\Bear Trade Platform\\CSI-3471\\iterationII\\default-user-image.png"));
 
 		JButton btnNewButton_2 = new JButton("N");
+		btnNewButton_2.setActionCommand("N");
+		btnNewButton_2.addActionListener(this);
 		GroupLayout gl_panel_1 = new GroupLayout(panel_1);
 		gl_panel_1.setHorizontalGroup(gl_panel_1.createParallelGroup(Alignment.LEADING).addGroup(gl_panel_1
 				.createSequentialGroup().addGap(27)
@@ -297,6 +300,12 @@ public class mainPage implements ActionListener {
 			CreateBidWindow window = new CreateBidWindow();
 			UIManager.put("swing.boldMetal", Boolean.FALSE);
 			window.createAndShowGUI();
+		}else if(e.getActionCommand()=="N") {
+			NotifPage window = new NotifPage();
+			UIManager.put("swing.boldMetal", Boolean.FALSE);
+			window.createAndShowGUI();
+//			info_Panel=new NotifPage();
+			
 		}
 
 	}
