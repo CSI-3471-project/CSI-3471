@@ -31,4 +31,4 @@ public class Comment {
 	public Date getTimeOfLastEdit() {
 		return timeOfLastEdit;
 	}
-
+}
