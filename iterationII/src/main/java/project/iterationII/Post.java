@@ -5,5 +5,5 @@ package project.iterationII;
  */
 public interface Post {
 	public void setDescription(String description);
-	public String getDescription(String description);
+	public String getDescription();
 }
