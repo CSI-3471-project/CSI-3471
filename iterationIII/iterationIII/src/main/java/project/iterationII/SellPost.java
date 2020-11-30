@@ -49,11 +49,18 @@ public class SellPost implements Post {
 
 	@Override
 	public void removeComment(Long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+/*
+	@Override
+	public void removeComment(Long id) {
 		allComments.removeIf(c -> c.getId() == id);
 	}
 
 	
-	
+	*/
 	
 	
 

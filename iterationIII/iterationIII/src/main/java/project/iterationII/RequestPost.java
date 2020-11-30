@@ -31,11 +31,16 @@ public class RequestPost implements Post{
 		allComments.add(c);
 		
 	}
-
+/*
 
 	@Override
 	public void removeComment(Long id) {
 		allComments.removeIf(c -> c.getId() == id);
+	}*/
+	@Override
+	public void removeComment(Long id) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
