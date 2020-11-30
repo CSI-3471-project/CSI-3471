@@ -1,8 +1,22 @@
 package project.iterationII;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class SellPost implements Post {
-	double sellPrice=0.0;
-	String description;
+	
+	private double sellPrice=0.0;
+	private String description;
+	
+	
+	public SellPost(double sellPrice, String description) {
+		super();
+		this.sellPrice = sellPrice;
+		this.description = description;
+	}
+	
+	
 	public void setSellPrice(Double price) {
 		this.sellPrice= price;
 	}
@@ -19,5 +33,28 @@ public class SellPost implements Post {
 	public String getDescription() {
 		return description;
 	}
+
+	@Override
+	public List<Comment> getAllComments() {
+		return allComments;
+	}
+
+
+	@Override
+	public void addComment(Comment c) {
+		allComments.add(c);
+		
+	}
+
+
+	@Override
+	public void removeComment(Long id) {
+		allComments.removeIf(c -> c.getId() == id);
+	}
+
+	
+	
+	
+	
 
 }

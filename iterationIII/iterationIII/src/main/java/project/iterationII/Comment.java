@@ -5,7 +5,8 @@ import java.util.Date;
 public class Comment {
 	private Date timeOfCreation;
 	private Date timeOfLastEdit;
-	
+	private static Long idMaker = 0L;
+	private Long id;
 	private String body;
 
 	
@@ -13,6 +14,7 @@ public class Comment {
 		this.body = body;
 		timeOfCreation = new Date(System.currentTimeMillis());
 		timeOfLastEdit = new Date(System.currentTimeMillis());
+		id = idMaker++;
 	}
 	
 	public Date getTOC() {
@@ -31,4 +33,11 @@ public class Comment {
 	public Date getTimeOfLastEdit() {
 		return timeOfLastEdit;
 	}
+
+	public Long getId() {
+		return id;
+	}
+
+	
+	
 }
