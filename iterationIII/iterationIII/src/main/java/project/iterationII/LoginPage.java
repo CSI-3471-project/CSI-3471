@@ -25,6 +25,7 @@ public class LoginPage extends JFrame implements ActionListener {
 	private JPanel contentPane;
 	private JTextField textField;
 	private JPasswordField passwordField;
+	static Profile user = new Profile();
 
 	/**
 	 * Create the frame.
@@ -99,14 +100,34 @@ public class LoginPage extends JFrame implements ActionListener {
 		btnNewButton_1.setFont(new Font("Calibri", Font.PLAIN, 15));
 		contentPane.add(btnNewButton_1);
 	}
+	/*
+	public Profile setUserInfo(String name, String password) {
+		Profile user = new Profile();
+		user.setPassword(password);
+		user.setUserName(name);	
+		return user;		
+	}*/
+	public Profile getUserInfo() {
+		return user;
+	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		//Profile user  = new Profile();
 		// TODO Auto-generated method stub
 		if (e.getActionCommand() == "log in") {
 
 			if (textField.getText().equals("User") && passwordField.getText().equals("password")) {
+				
 				this.dispose();
+				user.setUserName(this.textField.getText());
+				System.out.println("User name: "+ this.textField.getText());
+				user.setPassword(this.passwordField.getText());
+				System.out.println("Password: "+ this.passwordField.getText());
+				this.getUserInfo();
+				
+				
+				//this.passwordField.getText();
 				mainPage window = new mainPage();
 				window.frame.setVisible(true);
 			}else {
@@ -117,4 +138,5 @@ public class LoginPage extends JFrame implements ActionListener {
 		}
 
 	}
+	
 }

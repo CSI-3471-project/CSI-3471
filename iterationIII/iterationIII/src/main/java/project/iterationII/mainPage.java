@@ -47,6 +47,7 @@ public class mainPage implements ActionListener {
 	private JMenuBar menuBar;
 	private JPanel panel;
 	private JPanel info_Panel;
+	static JFrame frameForUser;
 
 	/**
 	 * Launch the application.
@@ -57,6 +58,7 @@ public class mainPage implements ActionListener {
 				try {
 					LoginPage login = new LoginPage();
 					login.setVisible(true);
+					
 					
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -70,6 +72,13 @@ public class mainPage implements ActionListener {
 	 */
 	public mainPage() {
 		initialize();
+	}
+	public JFrame setJFrame(JFrame j) {
+		frameForUser = j;
+		return frame;	
+	}
+	public JFrame getJFrame() {
+		return frameForUser;	
 	}
 
 	/**
@@ -228,6 +237,8 @@ public class mainPage implements ActionListener {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
+		this.setJFrame(frame);
+		
 
 		JLabel lblNewLabel = new JLabel("User");
 		lblNewLabel.setFont(new Font("Calibri", Font.BOLD, 25));
