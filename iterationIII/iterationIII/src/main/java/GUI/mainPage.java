@@ -1,4 +1,4 @@
-package project.iterationII;
+package GUI;
 
 import java.awt.EventQueue;
 
@@ -25,6 +25,10 @@ import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import net.miginfocom.swing.MigLayout;
+import project.iterationII.NotifPage;
+import project.iterationII.Profile;
+import project.iterationII.UserPanel;
+
 import javax.swing.JPanel;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
@@ -40,6 +44,7 @@ import com.jgoodies.forms.layout.RowSpec;
 import com.jgoodies.forms.layout.FormSpecs;
 import java.awt.GridLayout;
 import javax.swing.JScrollBar;
+
 
 public class mainPage implements ActionListener {
 

@@ -1,4 +1,4 @@
-package project.iterationII;
+package GUI;
 
 public class PlaceBidWindow {
 

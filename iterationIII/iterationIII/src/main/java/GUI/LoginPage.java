@@ -1,4 +1,4 @@
-package project.iterationII;
+package GUI;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -6,6 +6,10 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import project.iterationII.Driver;
+import project.iterationII.Profile;
+
 import javax.swing.SpringLayout;
 import java.awt.CardLayout;
 import javax.swing.JLabel;

@@ -1,4 +1,4 @@
-package project.iterationII;
+package GUI;
 
 import javax.swing.JPanel;
 import javax.swing.GroupLayout;

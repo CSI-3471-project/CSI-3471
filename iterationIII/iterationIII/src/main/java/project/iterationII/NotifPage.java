@@ -107,7 +107,7 @@ public class NotifPage extends JPanel {
 		setLayout(groupLayout);
 	}
 	
-	static void createAndShowGUI() {
+	public static void createAndShowGUI() {
 		JFrame frame = new JFrame("Notifications");
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
