@@ -50,8 +50,8 @@ public class Profile {
 		return credit;
 	}
 	
-	public void addCredit(double rating) {
-		credit += rating;
+	public void addCredit(Evalutaion e) {
+		credit += e.getValue();
 	}
 	
 	
