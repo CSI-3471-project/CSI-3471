@@ -26,11 +26,13 @@ public class LoginPage extends JFrame implements ActionListener {
 	private JTextField textField;
 	private JPasswordField passwordField;
 	static Profile user = new Profile();
+	Driver driver;
 
 	/**
 	 * Create the frame.
 	 */
-	public LoginPage() {
+	public LoginPage(Driver d) {
+		driver=d;
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -123,13 +125,15 @@ public class LoginPage extends JFrame implements ActionListener {
 				user.setUserName(this.textField.getText());
 				System.out.println("User name: "+ this.textField.getText());
 				user.setPassword(this.passwordField.getText());
+				user.credit=1.0;
+				user.trade=10;
 				System.out.println("Password: "+ this.passwordField.getText());
-				this.getUserInfo();
+
 				
+			
 				
 				//this.passwordField.getText();
-				mainPage window = new mainPage();
-				window.frame.setVisible(true);
+				driver.displayMainWindow(user);
 			}else {
 				//TODO error dialog here
 				System.out.println(textField.getText());

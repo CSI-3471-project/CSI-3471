@@ -7,6 +7,8 @@ public class Profile {
 	
 	private String userName;
 	private String password;
+	double credit;
+	int trade;
 	private List<Comment> allComments;
 	public Profile() {
 		

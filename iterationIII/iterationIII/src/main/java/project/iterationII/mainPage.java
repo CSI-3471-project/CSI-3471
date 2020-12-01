@@ -48,29 +48,13 @@ public class mainPage implements ActionListener {
 	private JPanel panel;
 	private JPanel info_Panel;
 	static JFrame frameForUser;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					LoginPage login = new LoginPage();
-					login.setVisible(true);
-					
-					
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
+	Profile user;
+	UserPanel userPanel;
 	/**
 	 * Create the application.
 	 */
-	public mainPage() {
+	public mainPage(Profile u) {
+		user=u;
 		initialize();
 	}
 	public JFrame setJFrame(JFrame j) {
@@ -137,8 +121,8 @@ public class mainPage implements ActionListener {
 		gbc_panel.gridy = 0;
 		frame.getContentPane().add(panel, gbc_panel);
 
-		JPanel panel_1 = new JPanel();
-		panel_1.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
+		userPanel=new UserPanel(user);
+		userPanel.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
 
 		JPanel info_Panel = new JPanel();
 		info_Panel.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
@@ -147,7 +131,7 @@ public class mainPage implements ActionListener {
 			gl_panel.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_panel.createSequentialGroup()
 					.addGap(2)
-					.addComponent(panel_1, GroupLayout.PREFERRED_SIZE, 165, GroupLayout.PREFERRED_SIZE)
+					.addComponent(userPanel, GroupLayout.PREFERRED_SIZE, 165, GroupLayout.PREFERRED_SIZE)
 					.addPreferredGap(ComponentPlacement.RELATED)
 					.addComponent(info_Panel, GroupLayout.PREFERRED_SIZE, 454, GroupLayout.PREFERRED_SIZE)
 					.addGap(20))
@@ -156,7 +140,7 @@ public class mainPage implements ActionListener {
 			gl_panel.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_panel.createSequentialGroup()
 					.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
-						.addComponent(panel_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(userPanel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 						.addComponent(info_Panel, GroupLayout.DEFAULT_SIZE, 438, Short.MAX_VALUE))
 					.addContainerGap())
 		);
@@ -232,87 +216,87 @@ public class mainPage implements ActionListener {
 		panel_3.setLayout(gl_panel_3);
 		info_Panel.setLayout(gl_info_Panel);
 
-		JButton btnNewButton = new JButton("Chat");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
+//		JButton btnNewButton = new JButton("Chat");
+//		btnNewButton.addActionListener(new ActionListener() {
+//			public void actionPerformed(ActionEvent e) {
+//			}
+//		});
 		this.setJFrame(frame);
 		
 
-		JLabel lblNewLabel = new JLabel("User");
-		lblNewLabel.setFont(new Font("Calibri", Font.BOLD, 25));
+//		JLabel lblNewLabel = new JLabel("User");
+//		lblNewLabel.setFont(new Font("Calibri", Font.BOLD, 25));
+//
+//		JLabel lblNewLabel_1 = new JLabel("credit : 4.5");
+//		lblNewLabel_1.setFont(new Font("Calibri", Font.PLAIN, 20));
+//
+//		JLabel lblNewLabel_1_1 = new JLabel("trade : 9999");
+//		lblNewLabel_1_1.setFont(new Font("Calibri", Font.PLAIN, 20));
+//
+//		JButton btnNewButton_1 = new JButton("like");
+//
+//		JLabel lblNewLabel_2 = new JLabel("99");
+//
+//		JLabel lblNewLabel_3 = new JLabel("New label");
+//		lblNewLabel_3.setIcon(
+//				new ImageIcon("D:\\CS3471\\Bear Trade Platform\\CSI-3471\\iterationII\\default-user-image.png"));
 
-		JLabel lblNewLabel_1 = new JLabel("credit : 4.5");
-		lblNewLabel_1.setFont(new Font("Calibri", Font.PLAIN, 20));
-
-		JLabel lblNewLabel_1_1 = new JLabel("trade : 9999");
-		lblNewLabel_1_1.setFont(new Font("Calibri", Font.PLAIN, 20));
-
-		JButton btnNewButton_1 = new JButton("like");
-
-		JLabel lblNewLabel_2 = new JLabel("99");
-
-		JLabel lblNewLabel_3 = new JLabel("New label");
-		lblNewLabel_3.setIcon(
-				new ImageIcon("D:\\CS3471\\Bear Trade Platform\\CSI-3471\\iterationII\\default-user-image.png"));
-
-		JButton btnNewButton_2 = new JButton("N");
-		btnNewButton_2.setActionCommand("N");
-		btnNewButton_2.addActionListener(this);
-		GroupLayout gl_panel_1 = new GroupLayout(panel_1);
-		gl_panel_1.setHorizontalGroup(
-			gl_panel_1.createParallelGroup(Alignment.TRAILING)
-				.addGroup(Alignment.LEADING, gl_panel_1.createSequentialGroup()
-					.addGap(40)
-					.addComponent(btnNewButton)
-					.addContainerGap(151, Short.MAX_VALUE))
-				.addGroup(Alignment.LEADING, gl_panel_1.createSequentialGroup()
-					.addGap(19)
-					.addGroup(gl_panel_1.createParallelGroup(Alignment.LEADING)
-						.addComponent(lblNewLabel_1_1, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)
-						.addGroup(gl_panel_1.createSequentialGroup()
-							.addComponent(btnNewButton_1)
-							.addGap(18)
-							.addComponent(lblNewLabel_2)))
-					.addContainerGap(129, Short.MAX_VALUE))
-				.addGroup(Alignment.LEADING, gl_panel_1.createSequentialGroup()
-					.addGap(27)
-					.addComponent(lblNewLabel_1, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(121, Short.MAX_VALUE))
-				.addGroup(gl_panel_1.createSequentialGroup()
-					.addContainerGap(137, Short.MAX_VALUE)
-					.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 85, GroupLayout.PREFERRED_SIZE)
-					.addGap(26))
-				.addGroup(gl_panel_1.createSequentialGroup()
-					.addContainerGap(123, Short.MAX_VALUE)
-					.addComponent(lblNewLabel_3, GroupLayout.PREFERRED_SIZE, 91, GroupLayout.PREFERRED_SIZE)
-					.addGap(34))
-				.addGroup(gl_panel_1.createSequentialGroup()
-					.addContainerGap(209, Short.MAX_VALUE)
-					.addComponent(btnNewButton_2))
-		);
-		gl_panel_1.setVerticalGroup(
-			gl_panel_1.createParallelGroup(Alignment.TRAILING)
-				.addGroup(gl_panel_1.createSequentialGroup()
-					.addComponent(btnNewButton_2)
-					.addGap(24)
-					.addComponent(lblNewLabel_3, GroupLayout.PREFERRED_SIZE, 87, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.UNRELATED)
-					.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 43, GroupLayout.PREFERRED_SIZE)
-					.addGap(29)
-					.addComponent(lblNewLabel_1, GroupLayout.PREFERRED_SIZE, 31, GroupLayout.PREFERRED_SIZE)
-					.addGap(18)
-					.addComponent(lblNewLabel_1_1, GroupLayout.PREFERRED_SIZE, 31, GroupLayout.PREFERRED_SIZE)
-					.addGap(18)
-					.addGroup(gl_panel_1.createParallelGroup(Alignment.BASELINE)
-						.addComponent(btnNewButton_1, GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE)
-						.addComponent(lblNewLabel_2))
-					.addGap(27)
-					.addComponent(btnNewButton)
-					.addGap(49))
-		);
-		panel_1.setLayout(gl_panel_1);
+//		JButton btnNewButton_2 = new JButton("N");
+//		btnNewButton_2.setActionCommand("N");
+//		btnNewButton_2.addActionListener(this);
+		//GroupLayout gl_panel_1 = new GroupLayout(panel_1);
+//		gl_panel_1.setHorizontalGroup(
+//			gl_panel_1.createParallelGroup(Alignment.TRAILING)
+//				.addGroup(Alignment.LEADING, gl_panel_1.createSequentialGroup()
+//					.addGap(40)
+//					.addComponent(btnNewButton)
+//					.addContainerGap(151, Short.MAX_VALUE))
+//				.addGroup(Alignment.LEADING, gl_panel_1.createSequentialGroup()
+//					.addGap(19)
+//					.addGroup(gl_panel_1.createParallelGroup(Alignment.LEADING)
+//						.addComponent(lblNewLabel_1_1, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)
+//						.addGroup(gl_panel_1.createSequentialGroup()
+//							.addComponent(btnNewButton_1)
+//							.addGap(18)
+//							.addComponent(lblNewLabel_2)))
+//					.addContainerGap(129, Short.MAX_VALUE))
+//				.addGroup(Alignment.LEADING, gl_panel_1.createSequentialGroup()
+//					.addGap(27)
+//					.addComponent(lblNewLabel_1, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)
+//					.addContainerGap(121, Short.MAX_VALUE))
+//				.addGroup(gl_panel_1.createSequentialGroup()
+//					.addContainerGap(137, Short.MAX_VALUE)
+//					.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 85, GroupLayout.PREFERRED_SIZE)
+//					.addGap(26))
+//				.addGroup(gl_panel_1.createSequentialGroup()
+//					.addContainerGap(123, Short.MAX_VALUE)
+//					.addComponent(lblNewLabel_3, GroupLayout.PREFERRED_SIZE, 91, GroupLayout.PREFERRED_SIZE)
+//					.addGap(34))
+//				.addGroup(gl_panel_1.createSequentialGroup()
+//					.addContainerGap(209, Short.MAX_VALUE)
+//					.addComponent(btnNewButton_2))
+//		);
+//		gl_panel_1.setVerticalGroup(
+//			gl_panel_1.createParallelGroup(Alignment.TRAILING)
+//				.addGroup(gl_panel_1.createSequentialGroup()
+//					.addComponent(btnNewButton_2)
+//					.addGap(24)
+//					.addComponent(lblNewLabel_3, GroupLayout.PREFERRED_SIZE, 87, GroupLayout.PREFERRED_SIZE)
+//					.addPreferredGap(ComponentPlacement.UNRELATED)
+//					.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 43, GroupLayout.PREFERRED_SIZE)
+//					.addGap(29)
+//					.addComponent(lblNewLabel_1, GroupLayout.PREFERRED_SIZE, 31, GroupLayout.PREFERRED_SIZE)
+//					.addGap(18)
+//					.addComponent(lblNewLabel_1_1, GroupLayout.PREFERRED_SIZE, 31, GroupLayout.PREFERRED_SIZE)
+//					.addGap(18)
+//					.addGroup(gl_panel_1.createParallelGroup(Alignment.BASELINE)
+//						.addComponent(btnNewButton_1, GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE)
+//						.addComponent(lblNewLabel_2))
+//					.addGap(27)
+//					.addComponent(btnNewButton)
+//					.addGap(49))
+//		);
+//		panel_1.setLayout(gl_panel_1);
 		panel.setLayout(gl_panel);
 	}
 
