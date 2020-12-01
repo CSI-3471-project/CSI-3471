@@ -2,7 +2,9 @@ package project.iterationII;
 
 public class Item {
 	String name, description;
-	String getName() {
+	double price;
+	
+	public String getName() {
 		return name;
 		
 	}

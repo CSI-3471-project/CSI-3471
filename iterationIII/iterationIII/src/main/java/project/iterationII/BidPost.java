@@ -4,20 +4,15 @@ import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BidPost implements Post {
+import GUI.PostInfoPanel;
+
+public class BidPost extends Post {
 	Date startDate;
 	Date EndDate;
 	String description;
 	double startPrice = 0.0;
-	
-	@Override
-	public void setDescription(String description) {
-		this.description = description;	
-	}
-	@Override
-	public String getDescription() {
-		return description;
-	}
+	Profile user;
+	Item item;
 	
 	
 	public Date getStartDate() {
@@ -38,11 +33,6 @@ public class BidPost implements Post {
 	public void setStartPrice(double startPrice) {
 		this.startPrice = startPrice;
 	}
-	public List<Comment> getAllComments() {
-		return allComments;
-	}
-	
-	
 	public BidPost(Date startDate, Date endDate, String description, double startPrice) {
 		super();
 		this.startDate = startDate;
@@ -51,21 +41,12 @@ public class BidPost implements Post {
 		this.startPrice = startPrice;
 	}
 	@Override
-	public void addComment(Comment c) {
-		allComments.add(c);
-	}
-	/*
-	@Override
-	public void removeComment(Long id) {
-		allComments.removeIf(c -> c.getId() == id);
-		
-	}
-	*/
-	@Override
-	public void removeComment(Long id) {
+	public PostInfoPanel setPostInfoPanel() {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
+	
+	
 	
 
 }

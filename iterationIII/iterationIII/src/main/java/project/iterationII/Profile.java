@@ -9,6 +9,7 @@ public class Profile {
 	private String userName;
 	private String password;
 	public int trade;
+	public double  credit;
 	private List<Comment> allComments;
 	private List<Evaluation> allEvals;
 	
