@@ -10,9 +10,6 @@ public class Profile {
 	public double credit;
 	public int trade;
 	private List<Comment> allComments;
-	public Profile() {
-		
-	}
 	
 	public String getPassaword() {
 		return password;
@@ -31,6 +28,7 @@ public class Profile {
 	public Profile(String userName) {
 		super();
 		this.userName = userName;
+		credit = 0.0;
 		allComments = new ArrayList<>();
 	}
 
@@ -48,6 +46,13 @@ public class Profile {
 		allComments.removeIf(c -> c.getId() == id);
 	}
 	
+	public double getCredit() {
+		return credit;
+	}
+	
+	public void addCredit(double rating) {
+		credit += rating;
+	}
 	
 	
 	
