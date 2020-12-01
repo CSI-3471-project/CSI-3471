@@ -1,6 +1,6 @@
 package project.iterationII;
 
-public class Evalutaion {
+public class Evaluation extends Comment{
 
 	private double value;
 
@@ -12,8 +12,8 @@ public class Evalutaion {
 		this.value = value;
 	}
 
-	public Evalutaion(double value) {
-		super();
+	public Evaluation(double value, String body) {
+		super(body);
 		this.value = value;
 	}
 	
