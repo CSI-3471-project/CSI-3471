@@ -2,17 +2,15 @@ package project.iterationII;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Profile {
 	
 	private String userName;
 	private String password;
-	public double credit;
 	public int trade;
 	private List<Comment> allComments;
-	public Profile() {
-		
-	}
+	private List<Evaluation> allEvals;
 	
 	public String getPassaword() {
 		return password;
@@ -31,7 +29,16 @@ public class Profile {
 	public Profile(String userName) {
 		super();
 		this.userName = userName;
+		trade = 0;
 		allComments = new ArrayList<>();
+		allEvals = new ArrayList<>();
+	}
+	
+	public Profile() {
+		userName = "";
+		trade = 0;
+		allComments = new ArrayList<>();
+		allEvals = new ArrayList<>();
 	}
 
 	public List<Comment> getAllComments() {
@@ -47,6 +54,15 @@ public class Profile {
 	public void removeComment(Long id) {
 		allComments.removeIf(c -> c.getId() == id);
 	}
+	
+	public double getCredit() {
+		return allEvals.stream().collect(Collectors.summingDouble(Evaluation::getValue));
+	}
+	
+	public void addEvaluation(Evaluation e) {
+		allEvals.add(e);
+	}
+	
 	
 	
 	

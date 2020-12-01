@@ -91,7 +91,7 @@ public class UserPanel extends JPanel {
 		tradePanel.add(credit_label);
 		credit_label.setFont(new Font("Calibri", Font.PLAIN, 25));
 		
-		JLabel credit = new JLabel(Double.toString(user.credit));
+		JLabel credit = new JLabel(Double.toString(user.getCredit()));
 		tradePanel.add(credit);
 		credit.setFont(new Font("Calibri", Font.PLAIN, 25));
 		setLayout(groupLayout);
