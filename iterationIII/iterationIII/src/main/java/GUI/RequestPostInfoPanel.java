@@ -25,7 +25,9 @@ public class RequestPostInfoPanel extends PostInfoPanel {
 	public RequestPostInfoPanel(Post p) {
 	
 		super();
-
+		post=p;
+		
+		setPostInfoPanel();
 		prefer_payPanel = new JPanel();
 		GroupLayout groupLayout = new GroupLayout(this);
 		groupLayout.setHorizontalGroup(

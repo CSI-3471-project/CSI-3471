@@ -63,7 +63,7 @@ public class mainPage implements ActionListener {
 	 */
 	public mainPage(Profile u,ArrayList<Post> p) {
 		user=u;
-		info_Panel=new InfoPanel(p);
+		//info_Panel=new InfoPanel(p);
 		initialize();
 		
 		
@@ -135,7 +135,7 @@ public class mainPage implements ActionListener {
 		userPanel=new UserPanel(user);
 		userPanel.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
 
-		//JPanel info_Panel = new JPanel();
+		JPanel info_Panel = new JPanel();
 		info_Panel.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
 		GroupLayout gl_panel = new GroupLayout(panel);
 		gl_panel.setHorizontalGroup(
@@ -156,76 +156,76 @@ public class mainPage implements ActionListener {
 					.addContainerGap())
 		);
 
-//		JPanel panel_3 = new JPanel();
-//		panel_3.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
-//
-//		JScrollBar scrollBar = new JScrollBar();
-//
-//		JPanel panel_3_1 = new JPanel();
-//		panel_3_1.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
-//
-//		JPanel panel_3_2 = new JPanel();
-//		panel_3_2.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
-//
-//		JPanel panel_3_3 = new JPanel();
-//		panel_3_3.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
-//		
-//				JPanel panel_3_4 = new JPanel();
-//				panel_3_4.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
-//		GroupLayout gl_info_Panel = new GroupLayout(info_Panel);
-//		gl_info_Panel.setHorizontalGroup(
-//			gl_info_Panel.createParallelGroup(Alignment.LEADING)
-//				.addGroup(gl_info_Panel.createSequentialGroup()
-//					.addContainerGap()
-//					.addComponent(scrollBar, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-//					.addPreferredGap(ComponentPlacement.UNRELATED)
-//					.addGroup(gl_info_Panel.createParallelGroup(Alignment.LEADING)
-//						.addComponent(panel_3_4, GroupLayout.DEFAULT_SIZE, 405, Short.MAX_VALUE)
-//						.addComponent(panel_3_3, GroupLayout.DEFAULT_SIZE, 405, Short.MAX_VALUE)
-//						.addComponent(panel_3_2, GroupLayout.DEFAULT_SIZE, 405, Short.MAX_VALUE)
-//						.addComponent(panel_3_1, GroupLayout.DEFAULT_SIZE, 405, Short.MAX_VALUE)
-//						.addComponent(panel_3, GroupLayout.DEFAULT_SIZE, 405, Short.MAX_VALUE))
-//					.addContainerGap())
-//		);
-//		gl_info_Panel.setVerticalGroup(
-//			gl_info_Panel.createParallelGroup(Alignment.LEADING)
-//				.addGroup(gl_info_Panel.createSequentialGroup()
-//					.addGap(14)
-//					.addGroup(gl_info_Panel.createParallelGroup(Alignment.LEADING)
-//						.addComponent(scrollBar, GroupLayout.DEFAULT_SIZE, 418, Short.MAX_VALUE)
-//						.addGroup(gl_info_Panel.createSequentialGroup()
-//							.addComponent(panel_3, GroupLayout.PREFERRED_SIZE, 66, GroupLayout.PREFERRED_SIZE)
-//							.addPreferredGap(ComponentPlacement.RELATED)
-//							.addComponent(panel_3_1, GroupLayout.PREFERRED_SIZE, 66, GroupLayout.PREFERRED_SIZE)
-//							.addPreferredGap(ComponentPlacement.RELATED)
-//							.addComponent(panel_3_2, GroupLayout.PREFERRED_SIZE, 66, GroupLayout.PREFERRED_SIZE)
-//							.addPreferredGap(ComponentPlacement.RELATED)
-//							.addComponent(panel_3_3, GroupLayout.PREFERRED_SIZE, 70, GroupLayout.PREFERRED_SIZE)
-//							.addPreferredGap(ComponentPlacement.RELATED)
-//							.addComponent(panel_3_4, GroupLayout.PREFERRED_SIZE, 69, GroupLayout.PREFERRED_SIZE)))
-//					.addContainerGap())
-//		);
+		JPanel panel_3 = new JPanel();
+		panel_3.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
 
-//		JButton btnNewButton_3 = new JButton("U");
-//
-//		JLabel lblNewLabel_4 = new JLabel("need Item: \r\n");
-//
-//		JLabel lblNewLabel_5 = new JLabel("description\r\n");
-//		GroupLayout gl_panel_3 = new GroupLayout(panel_3);
-//		gl_panel_3.setHorizontalGroup(gl_panel_3.createParallelGroup(Alignment.LEADING)
-//				.addGroup(gl_panel_3.createSequentialGroup().addGroup(gl_panel_3.createParallelGroup(Alignment.LEADING)
-//						.addGroup(gl_panel_3.createSequentialGroup().addComponent(btnNewButton_3)
-//								.addPreferredGap(ComponentPlacement.RELATED).addComponent(lblNewLabel_4))
-//						.addGroup(gl_panel_3.createSequentialGroup().addContainerGap().addComponent(lblNewLabel_5)))
-//						.addContainerGap(239, Short.MAX_VALUE)));
-//		gl_panel_3.setVerticalGroup(gl_panel_3.createParallelGroup(Alignment.LEADING)
-//				.addGroup(gl_panel_3.createSequentialGroup()
-//						.addGroup(gl_panel_3.createParallelGroup(Alignment.BASELINE).addComponent(btnNewButton_3)
-//								.addComponent(lblNewLabel_4))
-//						.addPreferredGap(ComponentPlacement.RELATED, 16, Short.MAX_VALUE).addComponent(lblNewLabel_5)
-//						.addContainerGap()));
-//		panel_3.setLayout(gl_panel_3);
-		//info_Panel.setLayout(gl_info_Panel);
+		JScrollBar scrollBar = new JScrollBar();
+
+		JPanel panel_3_1 = new JPanel();
+		panel_3_1.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
+
+		JPanel panel_3_2 = new JPanel();
+		panel_3_2.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
+
+		JPanel panel_3_3 = new JPanel();
+		panel_3_3.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
+		
+				JPanel panel_3_4 = new JPanel();
+				panel_3_4.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
+		GroupLayout gl_info_Panel = new GroupLayout(info_Panel);
+		gl_info_Panel.setHorizontalGroup(
+			gl_info_Panel.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_info_Panel.createSequentialGroup()
+					.addContainerGap()
+					.addComponent(scrollBar, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addGroup(gl_info_Panel.createParallelGroup(Alignment.LEADING)
+						.addComponent(panel_3_4, GroupLayout.DEFAULT_SIZE, 405, Short.MAX_VALUE)
+						.addComponent(panel_3_3, GroupLayout.DEFAULT_SIZE, 405, Short.MAX_VALUE)
+						.addComponent(panel_3_2, GroupLayout.DEFAULT_SIZE, 405, Short.MAX_VALUE)
+						.addComponent(panel_3_1, GroupLayout.DEFAULT_SIZE, 405, Short.MAX_VALUE)
+						.addComponent(panel_3, GroupLayout.DEFAULT_SIZE, 405, Short.MAX_VALUE))
+					.addContainerGap())
+		);
+		gl_info_Panel.setVerticalGroup(
+			gl_info_Panel.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_info_Panel.createSequentialGroup()
+					.addGap(14)
+					.addGroup(gl_info_Panel.createParallelGroup(Alignment.LEADING)
+						.addComponent(scrollBar, GroupLayout.DEFAULT_SIZE, 418, Short.MAX_VALUE)
+						.addGroup(gl_info_Panel.createSequentialGroup()
+							.addComponent(panel_3, GroupLayout.PREFERRED_SIZE, 66, GroupLayout.PREFERRED_SIZE)
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(panel_3_1, GroupLayout.PREFERRED_SIZE, 66, GroupLayout.PREFERRED_SIZE)
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(panel_3_2, GroupLayout.PREFERRED_SIZE, 66, GroupLayout.PREFERRED_SIZE)
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(panel_3_3, GroupLayout.PREFERRED_SIZE, 70, GroupLayout.PREFERRED_SIZE)
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(panel_3_4, GroupLayout.PREFERRED_SIZE, 69, GroupLayout.PREFERRED_SIZE)))
+					.addContainerGap())
+		);
+
+		JButton btnNewButton_3 = new JButton("U");
+
+		JLabel lblNewLabel_4 = new JLabel("need Item: \r\n");
+
+		JLabel lblNewLabel_5 = new JLabel("description\r\n");
+		GroupLayout gl_panel_3 = new GroupLayout(panel_3);
+		gl_panel_3.setHorizontalGroup(gl_panel_3.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_panel_3.createSequentialGroup().addGroup(gl_panel_3.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_panel_3.createSequentialGroup().addComponent(btnNewButton_3)
+								.addPreferredGap(ComponentPlacement.RELATED).addComponent(lblNewLabel_4))
+						.addGroup(gl_panel_3.createSequentialGroup().addContainerGap().addComponent(lblNewLabel_5)))
+						.addContainerGap(239, Short.MAX_VALUE)));
+		gl_panel_3.setVerticalGroup(gl_panel_3.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_panel_3.createSequentialGroup()
+						.addGroup(gl_panel_3.createParallelGroup(Alignment.BASELINE).addComponent(btnNewButton_3)
+								.addComponent(lblNewLabel_4))
+						.addPreferredGap(ComponentPlacement.RELATED, 16, Short.MAX_VALUE).addComponent(lblNewLabel_5)
+						.addContainerGap()));
+		panel_3.setLayout(gl_panel_3);
+		info_Panel.setLayout(gl_info_Panel);
 
 
 		this.setJFrame(frame);
