@@ -12,6 +12,7 @@ public class Driver {
 	Profile user;
 	mainPage window;
 	ArrayList<Post> p;
+	ArrayList<Profile> users;
 	public Driver() {
 		login=new LoginPage(this);
 		user = new Profile();
